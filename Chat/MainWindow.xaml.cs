@@ -67,7 +67,7 @@ namespace Chat
                 string from = ((IPEndPoint)remoteEndPoint).Address.ToString();
                 string messaggio = Encoding.UTF8.GetString(buffer, 0, nBytes);
 
-                lstRoba.Items.Add(from + ": " + messaggio);
+                lstMessaggi.Items.Add(from + ": " + messaggio);
             }
         }
 
@@ -78,8 +78,12 @@ namespace Chat
                 IPAddress remote = IPAddress.Parse(txtIP.Text);
                 IPEndPoint remote_endpoint = new IPEndPoint(remote, int.Parse(txtPorta.Text));
                 byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text);
+
+                lstMessaggi.Items.Add("You: " + txtMessaggio.Text);
+
                 socket.SendTo(messaggio, remote_endpoint);
 
+                txtMessaggio.Text = "";
             }
             catch(Exception ex)
             {

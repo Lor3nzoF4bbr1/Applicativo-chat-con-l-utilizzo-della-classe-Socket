@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstRoba" HorizontalAlignment="Left" Height="335" Margin="49,47,0,0" VerticalAlignment="Top" Width="274"/>
-        <Label Content="Indirizzo IP" HorizontalAlignment="Left" Margin="497,55,0,0" VerticalAlignment="Top"/>
-        <Label Content="Porta" HorizontalAlignment="Left" Margin="497,135,0,0" VerticalAlignment="Top"/>
-        <Label Content="Messaggio" HorizontalAlignment="Left" Margin="497,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.725,0.786"/>
-        <Button x:Name="btnInvia" Content="Invia" HorizontalAlignment="Left" Margin="497,319,0,0" VerticalAlignment="Top" Width="120" Click="btnInvia_Click" Height="29"/>
-        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="23" Margin="497,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Height="23" Margin="497,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Height="23" Margin="497,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lstMessaggi" HorizontalAlignment="Left" Height="316" Margin="49,66,0,0" VerticalAlignment="Top" Width="274"/>
+        <Label Content="Indirizzo IP" HorizontalAlignment="Left" Margin="352,66,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Porta" HorizontalAlignment="Left" Margin="352,125,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label Content="Messaggio" HorizontalAlignment="Left" Margin="352,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.725,0.786" Width="78"/>
+        <Button x:Name="btnInvia" Content="Invia" HorizontalAlignment="Left" Margin="352,347,0,0" VerticalAlignment="Top" Width="148" Click="btnInvia_Click" Height="35"/>
+        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="23" Margin="352,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Height="23" Margin="352,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Height="127" Margin="352,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Messaggi" HorizontalAlignment="Left" Height="40" Margin="49,21,0,0" VerticalAlignment="Top" Width="274" FontSize="20"/>
+        <Label Content="Invio messaggi" HorizontalAlignment="Left" Height="40" Margin="352,21,0,0" VerticalAlignment="Top" Width="148" FontSize="20"/>
 
     </Grid>
 </Window>
