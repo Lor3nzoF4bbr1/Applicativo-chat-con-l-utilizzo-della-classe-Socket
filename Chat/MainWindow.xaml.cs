@@ -23,6 +23,7 @@ namespace Chat
     /// </summary>
     public partial class MainWindow : Window
     {
+        IPAddress remoteSelezionato;
         Socket socket = null;
         DispatcherTimer dTimer=null;
         public MainWindow()
@@ -75,8 +76,7 @@ namespace Chat
         {
             try
             {
-                IPAddress remote = IPAddress.Parse(txtIP.Text);
-                IPEndPoint remote_endpoint = new IPEndPoint(remote, int.Parse(txtPorta.Text));
+                IPEndPoint remote_endpoint = new IPEndPoint(remoteSelezionato, int.Parse(txtPorta.Text));
                 byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text);
 
                 lstMessaggi.Items.Add("You: " + txtMessaggio.Text);
@@ -86,6 +86,45 @@ namespace Chat
                 txtMessaggio.Text = "";
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSalva_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                IPAddress controllo = IPAddress.Parse(txtIP.Text); //serve solo per controllare che l'ip inserito sia corretto
+
+                string contatto = txtNome.Text + " IP: " + txtIP.Text;
+                lstContatti.Items.Add(contatto);
+
+                txtNome.Text = "";
+                txtIP.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void lstContatti_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                string riga = lstContatti.SelectedItem.ToString();
+                string[] elementi = riga.Split(' ');
+                int index = elementi.Length - 1; //dato che il conteggio parte da 0
+                string ip = elementi[index];
+
+                remoteSelezionato = IPAddress.Parse(ip);
+
+                lstMessaggi.Items.Clear();
+                txtPorta.Text = "";
+                txtMessaggio.Text = "";
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
