@@ -97,9 +97,17 @@ namespace Chat {
         #line hidden
         
         
-        #line 26 "..\..\MainWindow.xaml"
+        #line 25 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtNome;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 26 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnBroadcast;
         
         #line default
         #line hidden
@@ -175,6 +183,9 @@ namespace Chat {
             return;
             case 8:
             this.txtNome = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 9:
+            this.btnBroadcast = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;
