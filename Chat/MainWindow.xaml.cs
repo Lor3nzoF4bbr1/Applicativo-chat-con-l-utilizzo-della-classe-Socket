@@ -91,6 +91,34 @@ namespace Chat
             }
         }
 
+        private void btnBroadcast_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                foreach(string s in lstContatti.Items)
+                {
+                    string[] elementi = s.Split(' ');
+                    int index = elementi.Length - 1; //dato che il conteggio parte da 0
+                    string ip = elementi[index];
+
+                    IPAddress remote = IPAddress.Parse(ip);
+
+                    IPEndPoint remote_endpoint = new IPEndPoint(remote, int.Parse(txtPorta.Text));
+                    byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text);
+
+                    socket.SendTo(messaggio, remote_endpoint);
+                }
+
+                lstMessaggi.Items.Add("(Broadcast) You: " + txtMessaggio.Text);
+
+                txtMessaggio.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnSalva_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -121,7 +149,6 @@ namespace Chat
                 remoteSelezionato = IPAddress.Parse(ip);
 
                 lstMessaggi.Items.Clear();
-                txtPorta.Text = "";
                 txtMessaggio.Text = "";
             }
             catch (Exception ex)

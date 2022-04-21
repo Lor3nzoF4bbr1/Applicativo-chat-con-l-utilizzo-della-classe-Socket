@@ -9,10 +9,10 @@
     <Grid>
         <ListBox x:Name="lstMessaggi" HorizontalAlignment="Left" Height="316" Margin="49,66,0,0" VerticalAlignment="Top" Width="274"/>
         <Label Content="Porta" HorizontalAlignment="Left" Margin="352,68,0,0" VerticalAlignment="Top" Width="48"/>
-        <Label Content="Messaggio" HorizontalAlignment="Left" Margin="352,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.725,0.786" Width="78"/>
-        <Button x:Name="btnInvia" Content="Invia" HorizontalAlignment="Left" Margin="352,347,0,0" VerticalAlignment="Top" Width="148" Click="btnInvia_Click" Height="35"/>
+        <Label Content="Messaggio" HorizontalAlignment="Left" Margin="352,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.725,0.786" Width="78"/>
+        <Button x:Name="btnInvia" Content="Invia" HorizontalAlignment="Left" Margin="352,304,0,0" VerticalAlignment="Top" Width="148" Click="btnInvia_Click" Height="35"/>
         <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Height="23" Margin="352,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
-        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Height="139" Margin="352,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Height="139" Margin="352,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
         <Label Content="Messaggi" HorizontalAlignment="Left" Height="40" Margin="49,21,0,0" VerticalAlignment="Top" Width="274" FontSize="20"/>
         <Label Content="Invio messaggi" HorizontalAlignment="Left" Height="40" Margin="352,21,0,0" VerticalAlignment="Top" Width="148" FontSize="20"/>
         <ListBox x:Name="lstContatti" HorizontalAlignment="Left" Height="316" Margin="544,66,0,0" VerticalAlignment="Top" Width="274" SelectionChanged="lstContatti_SelectionChanged"/>
@@ -21,9 +21,9 @@
         <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="23" Margin="847,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
         <Label Content="Contatti" HorizontalAlignment="Left" Height="40" Margin="544,21,0,0" VerticalAlignment="Top" Width="274" FontSize="20"/>
         <Label Content="Salva contatti" HorizontalAlignment="Left" Height="40" Margin="847,21,0,0" VerticalAlignment="Top" Width="148" FontSize="20"/>
-        <Label Content="La porta lasciata vuota&#xD;&#xA;vale come broadcast" HorizontalAlignment="Left" Margin="352,127,0,0" VerticalAlignment="Top" Width="148" Height="40"/>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="847,68,0,0" VerticalAlignment="Top" Width="78"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="847,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <Button x:Name="btnBroadcast" Content="Broadcast" HorizontalAlignment="Left" Height="35" Margin="352,347,0,0" VerticalAlignment="Top" Width="148" Click="btnBroadcast_Click"/>
 
     </Grid>
 </Window>
